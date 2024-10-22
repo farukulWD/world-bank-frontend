@@ -24,8 +24,12 @@ const RegisterForm = () => {
     };
 
     return (
-        <div className="w-full rounded-lg bg-white p-3 shadow sm:w-96 sm:p-5 md:w-[500px]">
-            <h1 className="text-2xl font-semibold text-gray-800">Register</h1>
+        <div className="">
+            <div>
+                <span className="bg-gradient-to-r from-[#fb5343] via-[rgb(103,74,217)] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent">
+                    World Bank
+                </span>
+            </div>
             <form className="mb-4 mt-4 flex flex-col gap-4">
                 <div>
                     <label
@@ -95,7 +99,17 @@ const RegisterForm = () => {
                 </div>
 
                 <div>
-                    <PrimaryButton className="w-full">Sign In</PrimaryButton>
+                    <button
+                        type="button"
+                        className="w-full rounded-lg bg-primary py-2 text-white"
+                        style={{
+                            // backgroundImage:
+                            //     'linear-gradient(160deg, rgb(251, 81, 65), rgb(103, 74, 217), rgb(103, 74, 217))',
+                            background: 'rgb(103, 74, 217)',
+                        }}
+                    >
+                        Sign Up
+                    </button>
                 </div>
             </form>
 

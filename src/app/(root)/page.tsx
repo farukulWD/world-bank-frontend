@@ -22,71 +22,72 @@ const HomePage = () => {
             <header className="">
                 <div className="border-b border-gray-800 bg-customPurple py-4">
                     <div className="container flex items-center justify-between gap-4 px-4 xl:px-0">
-                        <Sheet>
-                            <SheetTrigger>
-                                <span className="text-white">
-                                    <Menu />
-                                </span>
-                            </SheetTrigger>
-                            <SheetContent
-                                side={'left'}
-                                className="bg-customPurple"
-                            >
-                                <SheetHeader>
-                                    <SheetTitle className="border-b border-gray-600 text-left">
-                                        <Link
-                                            href={'/'}
-                                            className="bg-gradient-to-r from-[#fb5343] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent"
-                                        >
-                                            Bank
-                                        </Link>
-                                    </SheetTitle>
-                                    <ul className="flex flex-col gap-1">
-                                        <li className="w-full">
+                        <div className="md:hidden">
+                            <Sheet>
+                                <SheetTrigger>
+                                    <span className="text-white">
+                                        <Menu />
+                                    </span>
+                                </SheetTrigger>
+                                <SheetContent
+                                    side={'left'}
+                                    className="bg-customPurple"
+                                >
+                                    <SheetHeader>
+                                        <SheetTitle className="border-b border-gray-600 text-left">
                                             <Link
-                                                href="#"
-                                                className="block w-full px-2 py-1 text-left text-gray-400"
+                                                href={'/'}
+                                                className="bg-gradient-to-r from-[#fb5343] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent"
                                             >
-                                                Home
+                                                Bank
                                             </Link>
-                                        </li>
-                                        <li className="w-full">
-                                            <Link
-                                                href="#"
-                                                className="block w-full px-2 py-1 text-left text-gray-400"
-                                            >
-                                                About
-                                            </Link>
-                                        </li>
-                                        <li className="w-full">
-                                            <Link
-                                                href="#"
-                                                className="block w-full px-2 py-1 text-left text-gray-400"
-                                            >
-                                                Support
-                                            </Link>
-                                        </li>
-                                        <li className="w-full">
-                                            <Link
-                                                href="#"
-                                                className="block w-full px-2 py-1 text-left text-gray-400"
-                                            >
-                                                Blog
-                                            </Link>
-                                        </li>
-                                    </ul>
-                                    <div
-                                        className="absolute right-0 top-0 h-[200px] w-[150px] bg-blue-500"
-                                        style={{ filter: 'blur(200px)' }}
-                                    ></div>
-                                    <div
-                                        className="absolute bottom-0 left-0 h-[200px] w-[150px] bg-blue-500"
-                                        style={{ filter: 'blur(200px)' }}
-                                    ></div>
-                                </SheetHeader>
-                            </SheetContent>
-                        </Sheet>
-
+                                        </SheetTitle>
+                                        <ul className="flex flex-col gap-1">
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Home
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    About
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Support
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Blog
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            className="absolute right-0 top-0 h-[200px] w-[150px] bg-blue-500"
+                                            style={{ filter: 'blur(200px)' }}
+                                        ></div>
+                                        <div
+                                            className="absolute bottom-0 left-0 h-[200px] w-[150px] bg-blue-500"
+                                            style={{ filter: 'blur(200px)' }}
+                                        ></div>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
+                        </div>
                         <Link
                             href={'/'}
                             className="bg-gradient-to-r from-[#fb5343] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent"
