@@ -1,12 +1,20 @@
 import PrimaryButton from '@/components/buttons/PrimaryButton';
 import FeaturesSection from '@/components/home/FeaturesSection';
-import { ArrowRight, Phone } from 'lucide-react';
+import { ArrowRight, Menu, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 import { FaAngleRight } from 'react-icons/fa';
 import { MdOutlineLockPerson } from 'react-icons/md';
 import { VscWorkspaceTrusted } from 'react-icons/vsc';
+import {
+    Sheet,
+    SheetContent,
+    SheetDescription,
+    SheetHeader,
+    SheetTitle,
+    SheetTrigger,
+} from '@/components/ui/sheet';
 
 const HomePage = () => {
     return (
@@ -14,6 +22,72 @@ const HomePage = () => {
             <header className="">
                 <div className="border-b border-gray-800 bg-customPurple py-4">
                     <div className="container flex items-center justify-between gap-4 px-4 xl:px-0">
+                        <div className="md:hidden">
+                            <Sheet>
+                                <SheetTrigger>
+                                    <span className="text-white">
+                                        <Menu />
+                                    </span>
+                                </SheetTrigger>
+                                <SheetContent
+                                    side={'left'}
+                                    className="bg-customPurple"
+                                >
+                                    <SheetHeader>
+                                        <SheetTitle className="border-b border-gray-600 text-left">
+                                            <Link
+                                                href={'/'}
+                                                className="bg-gradient-to-r from-[#fb5343] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent"
+                                            >
+                                                Bank
+                                            </Link>
+                                        </SheetTitle>
+                                        <ul className="flex flex-col gap-1">
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Home
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    About
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Support
+                                                </Link>
+                                            </li>
+                                            <li className="w-full">
+                                                <Link
+                                                    href="#"
+                                                    className="block w-full px-2 py-1 text-left text-gray-400"
+                                                >
+                                                    Blog
+                                                </Link>
+                                            </li>
+                                        </ul>
+                                        <div
+                                            className="absolute right-0 top-0 h-[200px] w-[150px] bg-blue-500"
+                                            style={{ filter: 'blur(200px)' }}
+                                        ></div>
+                                        <div
+                                            className="absolute bottom-0 left-0 h-[200px] w-[150px] bg-blue-500"
+                                            style={{ filter: 'blur(200px)' }}
+                                        ></div>
+                                    </SheetHeader>
+                                </SheetContent>
+                            </Sheet>
+                        </div>
                         <Link
                             href={'/'}
                             className="bg-gradient-to-r from-[#fb5343] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent"
@@ -73,7 +147,7 @@ const HomePage = () => {
             <main>
                 <section className="relative">
                     <div
-                        className="filter-[200px] absolute -bottom-32 left-[20%] h-[300px] w-[300px] rounded-full bg-[#fb5141]"
+                        className="filter-[200px] absolute -bottom-32 left-[20%] hidden h-[300px] w-[300px] rounded-full bg-[#fb5141] md:block"
                         style={{ filter: 'blur(200px)' }}
                     ></div>
                     <div
@@ -82,7 +156,7 @@ const HomePage = () => {
                     ></div>
                     <div>
                         <div className="bg-customPurple py-28">
-                            <div className="container flex items-center justify-center">
+                            <div className="container flex items-center justify-center px-4 xl:px-0">
                                 <div className="flex flex-col gap-6">
                                     <div className="flex justify-center">
                                         <p className="rounded bg-gradient-to-r from-[#674ad91c] to-[#fb504128] px-4 py-1">
@@ -125,7 +199,7 @@ const HomePage = () => {
                 </section>
 
                 <section className="bg-customPurple pb-16 pt-10">
-                    <div className="contaienr">
+                    <div className="contaienr flex flex-col gap-4 px-4 md:gap-2 xl:px-0">
                         <div className="flex justify-center">
                             <p className="rounded bg-gradient-to-r from-[#674ad91c] to-[#fb504128] px-4 py-1">
                                 <span className="bg-gradient-to-r from-[#fb5343] to-[#c70cce] bg-clip-text font-semibold text-transparent">
@@ -133,10 +207,10 @@ const HomePage = () => {
                                 </span>
                             </p>
                         </div>
-                        <h2 className="text-center text-[46px] font-bold text-white">
+                        <h2 className="text-center text-[36px] font-bold leading-[40px] text-white md:text-[46px] md:leading-normal">
                             Complete Financial
                         </h2>
-                        <p className="mx-auto w-[400px] text-center text-gray-500">
+                        <p className="mx-auto text-center text-gray-500 lg:w-[400px]">
                             Lorem ipsum dolor sit amet consectetur adipisicing
                             elit. Modi, inventore!
                         </p>

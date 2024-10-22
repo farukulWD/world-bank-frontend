@@ -24,8 +24,13 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="w-full rounded-lg bg-white p-3 shadow sm:w-96 sm:p-5 md:w-[500px]">
-            <h1 className="text-2xl font-semibold text-gray-800">Login</h1>
+        <div className="">
+            <div>
+                <span className="bg-gradient-to-r from-[#fb5343] via-[rgb(103,74,217)] to-[#059dff] bg-clip-text text-[40px] font-[900] text-transparent">
+                    World Bank
+                </span>
+            </div>
+
             <form className="mb-4 mt-4 flex flex-col gap-4">
                 <div>
                     <label
@@ -100,6 +105,11 @@ const LoginForm = () => {
                     <button
                         type="button"
                         className="w-full rounded-lg bg-primary py-2 text-white"
+                        style={{
+                            // backgroundImage:
+                            //     'linear-gradient(160deg, rgb(251, 81, 65), rgb(103, 74, 217), rgb(103, 74, 217))',
+                            background: 'rgb(103, 74, 217)',
+                        }}
                     >
                         Sign In
                     </button>
@@ -108,7 +118,7 @@ const LoginForm = () => {
 
             <p className="text-center text-gray-600">
                 Create new account?{' '}
-                <Link className="text-primary" href={'/register'}>
+                <Link className="text-[#674ad9]" href={'/register'}>
                     Sign Up
                 </Link>
             </p>
