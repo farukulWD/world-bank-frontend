@@ -115,7 +115,7 @@ const RegisterForm = () => {
 
             <p className="text-center text-gray-600">
                 Already have an account?{' '}
-                <Link className="text-primary" href={'/login'}>
+                <Link className="text-[#674ad9]" href={'/login'}>
                     Sign Up
                 </Link>
             </p>
