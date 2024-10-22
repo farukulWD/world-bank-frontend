@@ -24,7 +24,7 @@ const BottomNav = () => {
         {
             id: 3,
             route: '/dashboard/help',
-            icon: <MdHelpOutline size={20} />,
+            icon: <MdHelpOutline size={22} />,
             title: 'Help',
         },
         {
@@ -38,14 +38,18 @@ const BottomNav = () => {
     const currentPath = usePathname();
 
     return (
-        <div className="mx-auto flex h-16 items-center justify-between rounded-tl-xl rounded-tr-xl border bg-primary p-5 shadow-md lg:w-[50vw]">
+        <div className="mx-auto mb-2 flex h-[70px] w-full items-center justify-between rounded-xl bg-secondary-foreground px-10 py-3 shadow-md md:w-[70vw] lg:w-[50vw]">
             {navItems.map((item) => (
                 <Link
                     key={item.id}
-                    className={`flex items-center gap-1 rounded-full px-5 py-2 ${currentPath === item.route ? 'bg-white text-gray-600' : 'text-gray-800'}`}
+                    className={`flex w-14 flex-col items-center gap-1 rounded-full ${currentPath === item.route ? 'text-primary' : 'text-white'}`}
                     href={item.route}
                 >
-                    {item.icon}
+                    <div
+                        className={` ${currentPath === item.route ? '-mt-10 flex size-14 items-center justify-center rounded-full border-[6px] border-theme bg-secondary-foreground' : ''}`}
+                    >
+                        <h2>{item.icon}</h2>
+                    </div>
                     {item.title}
                 </Link>
             ))}
