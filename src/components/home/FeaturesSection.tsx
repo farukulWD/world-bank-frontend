@@ -15,7 +15,7 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 const FeaturesSection = () => {
     return (
         <section className="bg-[#1c1636] py-16">
-            <div className="contaienr px-4 xl:px-0">
+            <div className="contaienr flex flex-col gap-3 px-4 md:gap-2 xl:px-0">
                 <div className="flex justify-center">
                     <p className="rounded bg-gradient-to-r from-[#674ad91c] to-[#fb504128] px-4 py-1">
                         <span className="bg-gradient-to-r from-[#fb5343] to-[#c70cce] bg-clip-text font-semibold text-transparent">
@@ -23,17 +23,18 @@ const FeaturesSection = () => {
                         </span>
                     </p>
                 </div>
-                <h2 className="text-center text-[46px] font-bold text-white">
+
+                <h2 className="text-center text-[36px] font-bold leading-[40px] text-white md:text-[46px] md:leading-normal">
                     Best Online Banking
                 </h2>
-                <p className="mx-auto w-[400px] text-center text-gray-500">
+                <p className="mx-auto text-center text-gray-500 lg:w-[400px]">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Modi, inventore!
                 </p>
             </div>
             <div className="container mt-6 px-4 xl:px-0">
                 <div
-                    className="rounded-xl p-8"
+                    className="rounded-xl p-4 md:p-8"
                     style={{
                         background: `linear-gradient(90deg, rgb(101, 73, 213) 0%, rgb(251, 83, 67) 50.5208313465%, rgb(5, 157, 255) 100%)`,
                     }}
@@ -47,7 +48,7 @@ const FeaturesSection = () => {
                             clickable: true,
                         }}
                         modules={[Mousewheel, Pagination]}
-                        className="mySwiper max-h-[860px] overflow-hidden lg:max-h-[430px]"
+                        className="mySwiper sm max-h-[750px] overflow-hidden lg:max-h-[430px]"
                     >
                         <SwiperSlide>
                             <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
@@ -69,7 +70,7 @@ const FeaturesSection = () => {
                                         <h3 className="text-center text-3xl font-bold text-white">
                                             Access account
                                         </h3>
-                                        <p className="mx-auto w-3/4 text-center font-medium text-white">
+                                        <p className="mx-auto text-center font-medium text-white md:w-3/4">
                                             Lorem ipsum dolor sit, amet
                                             consectetur adipisicing elit.
                                             Consequatur at sapiente ullam.
@@ -106,7 +107,7 @@ const FeaturesSection = () => {
                                         <h3 className="text-center text-3xl font-bold text-white">
                                             Fund Transfers
                                         </h3>
-                                        <p className="mx-auto w-3/4 text-center font-medium text-white">
+                                        <p className="mx-auto text-center font-medium text-white md:w-3/4">
                                             Lorem ipsum dolor sit, amet
                                             consectetur adipisicing elit.
                                             Consequatur at sapiente ullam.
@@ -143,7 +144,7 @@ const FeaturesSection = () => {
                                         <h3 className="text-center text-3xl font-bold text-white">
                                             Bill Payment
                                         </h3>
-                                        <p className="mx-auto w-3/4 text-center font-medium text-white">
+                                        <p className="mx-auto text-center font-medium text-white md:w-3/4">
                                             Lorem ipsum dolor sit, amet
                                             consectetur adipisicing elit.
                                             Consequatur at sapiente ullam.
