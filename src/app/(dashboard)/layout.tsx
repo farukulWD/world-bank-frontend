@@ -1,5 +1,6 @@
-import BottomNav from '@/components/dashboard/Shared/BottomNav';
 import Navbar from '@/components/dashboard/Shared/Navbar';
+import Sidebar from '@/components/dashboard/Shared/Sidebar';
+import DashboardProvider from '@/components/providers/DashboardProvider';
 import React, { FC } from 'react';
 
 type DashboardLayoutTypes = {
@@ -8,11 +9,16 @@ type DashboardLayoutTypes = {
 
 const DashboardLayout: FC<DashboardLayoutTypes> = ({ children }) => {
     return (
-        <div className="container mx-auto flex min-h-screen w-full max-w-[100vw] flex-col">
-            <Navbar />
-            {children}
-            <BottomNav />
-        </div>
+        <DashboardProvider>
+            <div className="flex w-full gap-5">
+                <Sidebar />
+                <div>
+                    <Navbar />
+                    {children}
+                </div>
+                {/* <BottomNav /> */}
+            </div>
+        </DashboardProvider>
     );
 };
 
