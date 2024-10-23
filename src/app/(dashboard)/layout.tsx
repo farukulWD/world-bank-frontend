@@ -1,4 +1,5 @@
 import BottomNav from '@/components/dashboard/Shared/BottomNav';
+import Navbar from '@/components/dashboard/Shared/Navbar';
 import React, { FC } from 'react';
 
 type DashboardLayoutTypes = {
@@ -7,7 +8,8 @@ type DashboardLayoutTypes = {
 
 const DashboardLayout: FC<DashboardLayoutTypes> = ({ children }) => {
     return (
-        <div className="mx-auto flex min-h-screen w-full max-w-[1440px] flex-col justify-between">
+        <div className="container mx-auto flex min-h-screen w-full max-w-[100vw] flex-col">
+            <Navbar />
             {children}
             <BottomNav />
         </div>

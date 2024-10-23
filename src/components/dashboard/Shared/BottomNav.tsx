@@ -38,19 +38,19 @@ const BottomNav = () => {
     const currentPath = usePathname();
 
     return (
-        <div className="mx-auto mb-2 flex h-[70px] w-full items-center justify-between rounded-xl bg-secondary-foreground px-10 py-3 shadow-md md:w-[70vw] lg:w-[50vw]">
+        <div className="mx-auto mb-2 mt-auto flex w-full items-center justify-between rounded-xl bg-secondary-foreground px-4 py-3 text-2xl shadow-md sm:h-[45px] md:h-[70px] md:px-7 lg:px-10">
             {navItems.map((item) => (
                 <Link
                     key={item.id}
-                    className={`flex w-14 flex-col items-center gap-1 rounded-full ${currentPath === item.route ? 'text-primary' : 'text-white'}`}
+                    className={`flex w-14 flex-col items-center gap-1 rounded-full text-sm md:text-base ${currentPath === item.route ? 'text-primary' : 'text-white'}`}
                     href={item.route}
                 >
                     <div
-                        className={` ${currentPath === item.route ? '-mt-10 flex size-14 items-center justify-center rounded-full border-[6px] border-theme bg-secondary-foreground' : ''}`}
+                        className={` ${currentPath === item.route ? '-mt-10 flex size-12 items-center justify-center rounded-full border-[6px] border-theme bg-secondary-foreground sm:size-14' : ''}`}
                     >
                         <h2>{item.icon}</h2>
                     </div>
-                    {item.title}
+                    <h2 className="hidden sm:block"> {item.title}</h2>
                 </Link>
             ))}
         </div>

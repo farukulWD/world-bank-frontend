@@ -14,7 +14,12 @@ body {
 
 @layer base {
     :root {
-        --primary: 250, 70%, 54%;
+        /* --primary: 217, 90%, 57%; */
+        /* --primary: 154, 100%, 43%; */
+        /* --primary: 145, 71%, 47%; */
+        /* --primary: 211, 66%, 40%; */
+        /* --primary: 17, 87%, 54%; */
+        --primary: 236, 92%, 66%;
         --primary-foreground: 210 40% 98%;
         --secondary: 210 40% 96.1%;
         --secondary-foreground: 222.2 47.4% 11.2%;
@@ -38,6 +43,6 @@ body {
 
 @layer utilities {
     .container {
-        @apply max-w-[1200px];
+        @apply max-w-[1200px] px-2 sm:px-4;
     }
 }
