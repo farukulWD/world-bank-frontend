@@ -1,11 +1,15 @@
+'use client';
 import PrimaryButton from '@/components/buttons/PrimaryButton';
+import ChangePassword from '@/components/modals/ChangePassword';
+import GlobalModal from '@/components/modals/GlobalModal';
 import { Info, Lock, LogOut } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { FaRegUserCircle } from 'react-icons/fa';
 
 const ProfilePage = () => {
+    const [isPasswordOpen, setIsPasswordOpen] = useState<boolean>(false);
     return (
         <div>
             <div className="flex flex-col gap-3 rounded-lg bg-primary p-6 pb-10">
@@ -68,20 +72,21 @@ const ProfilePage = () => {
                                     <PrimaryButton>View</PrimaryButton>
                                 </Link>
                             </li>
-                            <li>
-                                <Link
-                                    href={'/'}
-                                    className="flex items-center justify-between px-4 py-4 text-primary"
+
+                            <li className="flex items-center justify-between px-4 py-4 text-primary">
+                                <div className="flex items-center gap-3">
+                                    <span className="">
+                                        <Lock size={20} />
+                                    </span>
+                                    <span>Change Password</span>
+                                </div>
+                                <PrimaryButton
+                                    onClick={() => setIsPasswordOpen(true)}
                                 >
-                                    <div className="flex items-center gap-3">
-                                        <span className="">
-                                            <Lock size={20} />
-                                        </span>
-                                        <span>Change Password</span>
-                                    </div>
-                                    <PrimaryButton>View</PrimaryButton>
-                                </Link>
+                                    View
+                                </PrimaryButton>
                             </li>
+
                             <li>
                                 <Link
                                     href={'/'}
@@ -100,6 +105,14 @@ const ProfilePage = () => {
                     </div>
                 </div>
             </div>
+
+            <GlobalModal
+                modalTitle="Phoen Informatin"
+                open={isPasswordOpen}
+                setOpen={setIsPasswordOpen}
+            >
+                <ChangePassword />
+            </GlobalModal>
         </div>
     );
 };

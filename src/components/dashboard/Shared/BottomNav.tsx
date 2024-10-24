@@ -23,7 +23,7 @@ const BottomNav = () => {
         },
         {
             id: 3,
-            route: '/dashboard/help',
+            route: '/customer-service',
             icon: <MdHelpOutline size={22} />,
             title: 'Help',
         },

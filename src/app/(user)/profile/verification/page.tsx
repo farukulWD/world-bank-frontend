@@ -3,15 +3,17 @@ import PrimaryButton from '@/components/buttons/PrimaryButton';
 import GlobalModal from '@/components/modals/GlobalModal';
 import NIDVerifyCom from '@/components/modals/NIDVerifyCom';
 import PhoneInformation from '@/components/modals/PhoneInformation';
-import { Info, Lock, LogOut, Phone } from 'lucide-react';
+import { Info, LogOut, Phone } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import React, { useState } from 'react';
 import { FaRegUserCircle } from 'react-icons/fa';
+import { FaRegBuilding } from 'react-icons/fa';
 
 const ProfileVerification = () => {
     const [isNidOpen, setIsNidOpen] = useState<boolean>(false);
     const [isPhoneOpen, setIsPhoneOpen] = useState<boolean>(false);
+
     return (
         <div>
             <div className="flex flex-col gap-3 rounded-lg bg-primary p-6 pb-10">
@@ -62,33 +64,14 @@ const ProfileVerification = () => {
                                 </PrimaryButton>
                             </li>
 
-                            <li>
-                                <Link
-                                    href={'/'}
-                                    className="flex items-center justify-between px-4 py-4 text-primary"
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <span className="">
-                                            <Info />
-                                        </span>
-                                        <span>Load Details</span>
-                                    </div>
-                                    <PrimaryButton>View</PrimaryButton>
-                                </Link>
-                            </li>
-                            <li>
-                                <Link
-                                    href={'/'}
-                                    className="flex items-center justify-between px-4 py-4 text-primary"
-                                >
-                                    <div className="flex items-center gap-3">
-                                        <span className="">
-                                            <Lock size={20} />
-                                        </span>
-                                        <span>Change Password</span>
-                                    </div>
-                                    <PrimaryButton>View</PrimaryButton>
-                                </Link>
+                            <li className="flex items-center justify-between px-4 py-4 text-primary">
+                                <div className="flex items-center gap-3">
+                                    <span className="">
+                                        <Info />
+                                    </span>
+                                    <span>Load Details</span>
+                                </div>
+                                <PrimaryButton>View</PrimaryButton>
                             </li>
 
                             <li className="flex items-center justify-between px-4 py-4 text-primary">
@@ -113,7 +96,7 @@ const ProfileVerification = () => {
                                 >
                                     <div className="flex items-center gap-3">
                                         <span className="">
-                                            <LogOut size={20} />
+                                            <FaRegBuilding size={20} />
                                         </span>
                                         <span>Bank Account </span>
                                     </div>

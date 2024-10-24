@@ -25,38 +25,57 @@ const BankAccount = () => {
                         </div>
                     </div>
                     <form action="" className="flex flex-col gap-5">
-                        <div>
-                            <InputElement
-                                name="username"
-                                placeholder="Enter user name"
-                                label="User Name"
-                            />
+                        <div className="items-center sm:flex">
+                            <div className="w-full sm:w-[200px]">
+                                <label htmlFor="">User name</label>
+                            </div>
+                            <div className="flex-grow">
+                                <InputElement
+                                    name="username"
+                                    placeholder="Enter user name"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <InputElement
-                                name="username"
-                                placeholder="Enter user name"
-                                label="Bank Name"
-                            />
+                        <div className="items-center sm:flex">
+                            <div className="w-full sm:w-[200px]">
+                                <label htmlFor="">Bank Name</label>
+                            </div>
+                            <div className="flex-grow">
+                                <InputElement
+                                    name="bankname"
+                                    placeholder="Enter bank name"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <InputElement
-                                name="username"
-                                placeholder="Enter user name"
-                                label="Account Number"
-                            />
+                        <div className="items-center sm:flex">
+                            <div className="w-full sm:w-[200px]">
+                                <label htmlFor="">Account Number</label>
+                            </div>
+                            <div className="flex-grow">
+                                <InputElement
+                                    name="account_number"
+                                    placeholder="Enter account number"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <InputElement
-                                name="username"
-                                placeholder="Enter user name"
-                                label="Branch Name"
-                            />
+                        <div className="items-center sm:flex">
+                            <div className="w-full sm:w-[200px]">
+                                <label htmlFor="">Branch Name</label>
+                            </div>
+                            <div className="flex-grow">
+                                <InputElement
+                                    name="account_number"
+                                    placeholder="Enter branch name"
+                                />
+                            </div>
                         </div>
-                        <div>
-                            <PrimaryButton className="w-full py-3">
-                                Submit
-                            </PrimaryButton>
+                        <div className="items-center sm:flex">
+                            <div className="w-full sm:w-[200px]"></div>
+                            <div className="flex-grow">
+                                <PrimaryButton className="w-full py-3">
+                                    Submit
+                                </PrimaryButton>
+                            </div>
                         </div>
                     </form>
                 </div>

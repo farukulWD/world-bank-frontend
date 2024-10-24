@@ -1,46 +1,52 @@
 import Image from 'next/image';
-import Link from 'next/link';
 import React from 'react';
 import { FiArrowDownRight } from 'react-icons/fi';
 
 import { TiArrowMaximise } from 'react-icons/ti';
 import { LuArrowUpWideNarrow } from 'react-icons/lu';
 import LoadTable from '@/components/tables/LoadTable';
+import { MdMonetizationOn } from 'react-icons/md';
 
 const AccountPage = () => {
     return (
         <div>
-            <div className="flex flex-col gap-3 rounded-lg bg-primary p-6 pb-10">
-                <div className="flex items-center gap-4">
-                    <div className="h-[60px] w-[60px] rounded-full">
-                        <Link href={'/profile'}>
-                            <Image
-                                src={'/image/camera.png'}
-                                width={100}
-                                height={100}
-                                alt="Profile"
-                            />
-                        </Link>
-                    </div>
+            <div className="flex flex-col gap-3 rounded-lg bg-primary px-6 pb-20 pt-10">
+                <div className="flex items-center justify-between gap-4">
                     <div>
-                        <p className="text-white">+016454565656</p>
-                        <p className="text-xs text-gray-300">
-                            <span>UID</span> 6454565656
+                        <p className="text-white">Total Amount</p>
+                        <p className="text-3xl font-extrabold text-white">
+                            <span>$</span> 100
                         </p>
                     </div>
-                </div>
-                <div>
-                    <p className="text-white">Loaned (BDT)</p>
-                    <p className="text-[30px] font-extrabold text-white">
-                        BDT 0
-                    </p>
+                    <div className="flex flex-col items-center gap-2">
+                        <div className="h-[66px] w-[66px] rounded-full">
+                            <Image
+                                src={'/image/globe.png'}
+                                width={80}
+                                height={80}
+                                alt="global"
+                            />
+                        </div>
+                        <div>
+                            <button className="rounded-md border border-white px-4 py-2 text-xs text-white hover:bg-white hover:text-primary">
+                                Withdraw
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div className="-mt-8 px-4">
                 <div className="flex flex-col gap-4">
-                    <div className="rounded-lg bg-white p-6">
-                        <p className="text-primary">Wallet Balance </p>
-                        <p className="text-primary">BDT 0</p>
+                    <div className="flex items-center justify-between rounded-lg bg-white p-3 shadow md:p-6">
+                        <div>
+                            <p className="text-primary">Wallet Balance </p>
+                            <p className="text-primary">BDT 0</p>
+                        </div>
+                        <div>
+                            <button className="flex items-center gap-1 rounded-md border-2 border-transparent bg-primary px-1 py-2 text-xs text-white transition-all hover:border-primary hover:bg-transparent hover:text-primary md:gap-2 md:px-4 md:py-3 md:text-base">
+                                <MdMonetizationOn size={22} /> Apply for a loan
+                            </button>
+                        </div>
                     </div>
                     <div className="rounded-lg">
                         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
