@@ -11,7 +11,7 @@ const BottomNav = () => {
     const navItems = [
         {
             id: 1,
-            route: '/dashboard',
+            route: '/account',
             icon: <TbHome size={20} />,
             title: 'Home',
         },
@@ -29,7 +29,7 @@ const BottomNav = () => {
         },
         {
             id: 4,
-            route: '/dashboard/profile',
+            route: '/profile',
             icon: <FaRegUserCircle size={20} />,
             title: 'Profile',
         },
