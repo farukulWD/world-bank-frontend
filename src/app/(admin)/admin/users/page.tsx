@@ -1,7 +1,18 @@
 import GlobalAdminTable from '@/components/tables/GlobalAdminTable';
+import { Input } from '@/components/ui/input';
 import { members } from '@/constants/data';
-import { Edit, Eye, Trash } from 'lucide-react';
+import { Edit, Eye, Search, Trash } from 'lucide-react';
 import React, { ReactNode } from 'react';
+
+import {
+    Select,
+    SelectContent,
+    SelectItem,
+    SelectTrigger,
+    SelectValue,
+} from '@/components/ui/select';
+import PrimaryButton from '@/components/buttons/PrimaryButton';
+
 type Column<T> = {
     title: string;
     dataIndex: string;
@@ -26,11 +37,7 @@ const AllUsers = () => {
             dataIndex: 'postedDate',
             key: 'postedDate',
         },
-        {
-            title: 'Posted By',
-            dataIndex: 'postedBy',
-            key: 'postedBy',
-        },
+
         {
             title: 'Category',
             dataIndex: 'postCategory',
@@ -58,15 +65,15 @@ const AllUsers = () => {
             render: () => {
                 return (
                     <div className="flex items-center gap-3">
-                        <button className="flex items-center gap-1 rounded-md bg-blue-100 px-2 py-2 text-sm text-primary">
-                            <Eye size={16} /> View
+                        <button className="flex items-center gap-1 rounded-md bg-primary px-2 py-2 text-xs font-normal text-white">
+                            <Eye size={14} /> View
                         </button>
-                        <button className="flex items-center gap-1 rounded-md bg-slate-100 px-2 py-2 text-sm text-black">
-                            <Edit size={16} /> Edit
+                        <button className="flex items-center gap-1 rounded-md bg-slate-800 px-2 py-2 text-xs font-normal text-white">
+                            <Edit size={14} /> Edit
                         </button>
 
-                        <button className="flex items-center gap-1 rounded-md bg-red-100/50 px-2 py-2 text-sm text-red-600">
-                            <Trash size={16} /> Delete
+                        <button className="flex items-center gap-1 rounded-md bg-red-500 px-2 py-2 text-xs font-normal text-white">
+                            <Trash size={14} /> Delete
                         </button>
                     </div>
                 );
@@ -78,6 +85,75 @@ const AllUsers = () => {
         <div className="flex flex-col gap-4">
             <div className="flex w-full items-center justify-between rounded-md py-2 font-semibold">
                 All Users
+            </div>
+
+            <div className="grid grid-cols-1 gap-2 rounded-lg border bg-white p-4 res424:grid-cols-2 sm:grid-cols-3 res11:flex">
+                <Input
+                    type="text"
+                    className="h-auto min-w-[150px] py-3"
+                    placeholder="Search members"
+                />
+                <Select>
+                    <SelectTrigger className="h-auto py-3">
+                        <SelectValue placeholder="Status" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                        <SelectItem value="active" className="cursor-pointer">
+                            Active
+                        </SelectItem>
+                        <SelectItem value="pending" className="cursor-pointer">
+                            Pending
+                        </SelectItem>
+                        <SelectItem value="banned" className="cursor-pointer">
+                            Banned
+                        </SelectItem>
+                    </SelectContent>
+                </Select>
+                <Select>
+                    <SelectTrigger className="h-auto py-3">
+                        <SelectValue placeholder="Mobile Verify" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                        <SelectItem value="Verify" className="cursor-pointer">
+                            Verify
+                        </SelectItem>
+                        <SelectItem value="Unverify" className="cursor-pointer">
+                            Unverify
+                        </SelectItem>
+                    </SelectContent>
+                </Select>
+                <Select>
+                    <SelectTrigger className="h-auto py-3">
+                        <SelectValue placeholder="Email Verify" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                        <SelectItem value="Verify" className="cursor-pointer">
+                            Verify
+                        </SelectItem>
+                        <SelectItem value="Unverify" className="cursor-pointer">
+                            Unverify
+                        </SelectItem>
+                    </SelectContent>
+                </Select>
+                <Select>
+                    <SelectTrigger className="h-auto py-3">
+                        <SelectValue placeholder="KYC" />
+                    </SelectTrigger>
+                    <SelectContent className="bg-white">
+                        <SelectItem value="Pending" className="cursor-pointer">
+                            Pending
+                        </SelectItem>
+                        <SelectItem value="Unverify" className="cursor-pointer">
+                            Unverify
+                        </SelectItem>
+                    </SelectContent>
+                </Select>
+                <div>
+                    <PrimaryButton className="w-full py-3">
+                        <Search />
+                        Search
+                    </PrimaryButton>
+                </div>
             </div>
 
             <div className="">

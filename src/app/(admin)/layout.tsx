@@ -13,7 +13,7 @@ const DashboardLayout: FC<DashboardLayoutTypes> = ({ children }) => {
 
     return (
         <DashboardProvider>
-            <div className="relative flex min-h-screen">
+            <div className="relative flex min-h-screen overflow-x-auto">
                 <ReactSidebarPro
                     isLeftBar={isLeftBar}
                     setIsLeftBar={setIsLeftBar}

@@ -71,9 +71,7 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
                             Due loans{' '}
                         </MenuItem>
 
-                        <MenuItem
-                            component={<Link href="/admin/documentation" />}
-                        >
+                        <MenuItem component={<Link href="/admin/loans" />}>
                             All loans{' '}
                         </MenuItem>
                     </SubMenu>
@@ -98,9 +96,7 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
                         </MenuItem>
                         <MenuItem> KYC Pending </MenuItem>
                     </SubMenu>
-                    <MenuItem component={<Link href="/documentation" />}>
-                        Documentation{' '}
-                    </MenuItem>
+                    <MenuItem>Documentation </MenuItem>
                     <MenuItem> Calendar </MenuItem>
                 </Menu>
             </Sidebar>
