@@ -10,7 +10,7 @@ type ReactSidebarProTypes = {
 
 const Navbar: FC<ReactSidebarProTypes> = ({ isLeftBar, setIsLeftBar }) => {
     return (
-        <div className="flex flex-col items-center justify-between gap-3 bg-primary px-6 py-2 text-center text-xl text-white md:flex-row lg:h-[66px]">
+        <div className="flex flex-col items-center justify-between gap-3 bg-white px-6 py-2 text-center text-xl shadow-sm md:flex-row lg:h-[66px]">
             <div className="flex w-full items-center gap-5">
                 <span
                     className="cursor-pointer lg:hidden"

@@ -35,6 +35,7 @@ const config: Config = {
             },
             screens: {
                 res4: '400px',
+                res424: '424px',
                 res5: '500px',
             },
         },

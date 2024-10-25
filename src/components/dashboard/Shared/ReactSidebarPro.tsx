@@ -18,7 +18,7 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
 
     return (
         <div
-            className={` ${isTabletOrMobile ? ` ${isLeftBar ? 'left-0' : '-left-full'} absolute bottom-0 left-0 top-0 z-10 bg-white bg-opacity-100 transition-all duration-1000` : 'hidden lg:block'} `}
+            className={` ${isTabletOrMobile ? ` ${isLeftBar ? 'left-0' : '-left-full'} absolute bottom-0 top-0 z-10 bg-white transition-all duration-1000` : 'hidden lg:block'} bg-white`}
         >
             <span
                 className="absolute right-3 top-4 z-20 cursor-pointer lg:hidden"
@@ -35,7 +35,7 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
                 //     transition: 'left 0.3s ease',
                 //     zIndex: 1000,
                 // }}
-                className="h-full"
+                className="h-full bg-white"
             >
                 <div>
                     <div
@@ -49,7 +49,7 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
                         logo
                     </div>
                 </div>
-                <Menu>
+                <Menu className="">
                     <MenuItem component={<Link href="/admin/dashboard" />}>
                         Dashboard
                     </MenuItem>
@@ -93,10 +93,8 @@ const ReactSidebarPro: FC<ReactSidebarProTypes> = ({
                         >
                             Pending users{' '}
                         </MenuItem>
-                        <MenuItem
-                            component={<Link href="/admin/documentation" />}
-                        >
-                            All users{' '}
+                        <MenuItem component={<Link href="/admin/users" />}>
+                            All users
                         </MenuItem>
                         <MenuItem> KYC Pending </MenuItem>
                     </SubMenu>
