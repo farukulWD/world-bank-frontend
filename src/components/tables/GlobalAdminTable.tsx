@@ -51,7 +51,7 @@ const GlobalAdminTable: FC<TableType> = ({ columns, dataSource }) => {
                         {columns?.map((column, i) => (
                             <TableCell
                                 key={i}
-                                className="text-text-gray border-b border-t font-medium first:border-l last:border-r"
+                                className="border-b border-t font-medium text-slate-700 first:border-l last:border-r"
                             >
                                 {column.render
                                     ? column.render(

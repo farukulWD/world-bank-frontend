@@ -36,12 +36,12 @@ const InputElement = ({
                 {required && <span className="">*</span>}
             </label>
 
-            <Input
+            <input
                 name={name}
                 type={type}
                 placeholder={placeholder}
                 className={cn(
-                    'bg-background-mist text-text-gray dark:bg-background-white h-auto w-full rounded-[7px] border-none px-4 py-[10px] text-base shadow-none ring-1 ring-[#E3DEFE] focus-visible:ring-1 focus-visible:ring-[#E3DEFE] dark:ring-[rgba(255,255,255,0.20)]',
+                    'w-full rounded-md border border-gray-300 bg-transparent px-3 py-2 text-gray-700 focus-visible:outline-primary',
                     className,
                 )}
                 value={value}
