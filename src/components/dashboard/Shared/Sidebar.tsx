@@ -4,18 +4,12 @@ import React, { ReactNode, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import {
-    MdOutlineLaptopChromebook,
-    MdListAlt,
-    MdOutlineClose,
-    MdHelpOutline,
-} from 'react-icons/md';
-import { BiCategory, BiAddToQueue } from 'react-icons/bi';
-import { TbHome, TbListDetails, TbUsers, TbUserShield } from 'react-icons/tb';
+import { MdOutlineClose, MdHelpOutline } from 'react-icons/md';
+
+import { TbHome } from 'react-icons/tb';
 import { useMediaQuery } from 'react-responsive';
 import { FaChevronDown } from 'react-icons/fa6';
-import { FaRegUserCircle, FaUsersCog } from 'react-icons/fa';
-import { PiUsersThreeBold } from 'react-icons/pi';
+import { FaRegUserCircle } from 'react-icons/fa';
 import { setMenuOpen } from '@/redux/reducers/generalReducer';
 import { useAppDispatch, useAppSelector } from '@/redux/hooks';
 import { Button } from '@/components/ui/button';
@@ -115,7 +109,6 @@ const Sidebar = () => {
                     {!isDesktopOrLaptop && (
                         <Button
                             onClick={() => handleClose(false)}
-                            // variant={'icon'}
                             className="border-border-color border"
                         >
                             <MdOutlineClose />

@@ -1,11 +1,13 @@
+'use client';
+
 import ProfileDropdown from '@/components/navbar/ProfileDropdown';
 import { Input } from '@/components/ui/input';
 import { Earth, Menu, Search, Settings } from 'lucide-react';
 import React, { FC } from 'react';
 
 type ReactSidebarProTypes = {
-    isLeftBar: boolean;
-    setIsLeftBar: React.Dispatch<React.SetStateAction<boolean>>;
+    isLeftBar?: boolean;
+    setIsLeftBar?: React.Dispatch<React.SetStateAction<boolean>> | undefined;
 };
 
 const Navbar: FC<ReactSidebarProTypes> = ({ isLeftBar, setIsLeftBar }) => {
@@ -14,7 +16,7 @@ const Navbar: FC<ReactSidebarProTypes> = ({ isLeftBar, setIsLeftBar }) => {
             <div className="flex w-full items-center gap-5">
                 <span
                     className="cursor-pointer lg:hidden"
-                    onClick={() => setIsLeftBar(true)}
+                    onClick={() => setIsLeftBar && setIsLeftBar(true)}
                 >
                     <Menu />
                 </span>
